@@ -6,5 +6,6 @@
   
   <body>
     <h2> THIS IS HOME PAGE </h2>
+    <a href="/userdetails"User Details</a>
   </body>
 </html>

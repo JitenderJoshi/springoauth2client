@@ -14,11 +14,16 @@ spring:
             provider: github
             client-id: <CLIENT ID CONFIGURED IN GITHUB>
             client-secret: <CLIENT SECRET CONFIGURED IN GITHUB>
-            scope: read:user
+            scope: read:user,public_repo
             redirect-uri: http://localhost:9080/login/oauth2/code/github
           #google:
             #provider: google
             #client-id: <CLIENT ID CONFIGURED IN GOOGLE>
             #client-secret: <CLIENT SECRET CONFIGURED IN GOOGLE>
-            #scope: profile
+            #scope: profile,https://www.googleapis.com/auth/contacts.readonly
             #redirect-uri: http://localhost:9080/login/oauth2/code/google
+        provider:
+          github:
+            user-info-uri: https://api.github.com/user
+resource-uri: https://api.github.com/user/repos
+#resource-uri: https://www.google.com/m8/feeds/contacts/
